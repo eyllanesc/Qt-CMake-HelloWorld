@@ -15,9 +15,6 @@ install:
 env:
   - QT_DEBUG_PLUGINS=1
 script:
-  - wget https://github.com/google/double-conversion/archive/v3.1.5.tar.gz
-  - tar -xvf v3.1.5.tar.gz  
-  - cd double-conversion-3.1.5 && mkdir build && cd build && cmake  ../ -DBUILD_SHARED_LIBS=ON &&  make && make install &&cd ../../
   - conan remote add bincrafters "https://api.bintray.com/conan/bincrafters/public-conan"
   - mkdir build && cd build && conan install .. --build=qt && cmake .. && make
   - ./bin/helloworld
