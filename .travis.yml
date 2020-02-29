@@ -37,5 +37,5 @@ env:
   - QT_DEBUG_PLUGINS=1
 script:
   - conan remote add bincrafters "https://api.bintray.com/conan/bincrafters/public-conan"
-  - mkdir build && cd build && conan install .. && cmake .. && make
-  - ./bin/helloworld
+  - mkdir build && cd build && conan install .. --build Qt && cmake .. && make
+  - timeout 10 ./bin/helloworld
