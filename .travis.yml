@@ -1,5 +1,10 @@
 os: linux
 language: python
+addons:
+  apt:
+    packages:
+    - libzstd-dev
+services: xvfb
 python: "3.7"
 dist: xenial
 compiler:
@@ -10,3 +15,4 @@ install:
 script:
   - conan remote add bincrafters "https://api.bintray.com/conan/bincrafters/public-conan"
   - mkdir build && cd build && conan install .. --build=qt && cmake .. && make
+  - QT_DEBUG_PLUGINS=1 ./Qt-CMake-HelloWorld/build/bin/helloworld
