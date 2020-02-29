@@ -3,7 +3,6 @@ Qt/5.9@bincrafters/stable
 
 [generators]
 cmake
-qt
 
 [options]
 *:shared=True
