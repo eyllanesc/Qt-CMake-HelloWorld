@@ -3,8 +3,9 @@ language: python
 addons:
   apt:
     packages:
-    - libzstd-dev
     - libzstd1
+    - libdouble-conversion-dev
+    - libdouble-conversion1v5 
 services: xvfb
 python: "3.7"
 dist: xenial
