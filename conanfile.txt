@@ -3,6 +3,7 @@ Qt/5.9@bincrafters/stable
 
 [generators]
 cmake
+virtualrunenv
 
 [options]
 *:shared=True
